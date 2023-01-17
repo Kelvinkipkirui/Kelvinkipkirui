@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Kelvinkipkirui
 - 👀 I’m a Data Scientist/ Data Analyst
-- 🌱 I’m currently improving my skill SQL/R/Excel/Python
+- 🌱 I’m currently improving my skills on SQL/R/Excel/Python
 - 💞️ I’m looking for Data Analyst/Data Scientist jobs
 - 📫 How to reach me kelvinmutai992@gmail.com and +254790365073
 - You can checkout my work on the repository displayed.
