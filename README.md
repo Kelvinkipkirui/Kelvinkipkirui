@@ -1,8 +1,10 @@
 - 👋 Hi, I’m @Kelvinkipkirui
-- 👀 I’m interested in Data Analysis
-- 🌱 I’m currently learning SQL/R/Excel
-- 💞️ I’m looking to collaborate on Data Analysis
-- 📫 How to reach me kelvinmutai992@gmail.com
+- 👀 I’m a Data Scientist/ Data Analyst
+- 🌱 I’m currently improving my skill SQL/R/Excel/Python
+- 💞️ I’m looking for Data Analyst/Data Scientist jobs
+- 📫 How to reach me kelvinmutai992@gmail.com and +254790365073
+- You can checkout my work on the repository displayed.
+- 
 
 <!---
 Kelvinkipkirui/Kelvinkipkirui is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
