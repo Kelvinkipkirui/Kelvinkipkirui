@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @Kelvinkipkirui
-- 👀 I’m a Data Scientist/ Data Analyst
+- 👀 I’m a Data Scientist/ Data Analyst/ Business Intelligence/DPO.
 - 🌱 My skills are in SQL/R/Excel/Python/PowerBi/QuickSight
 - 💞️ I’m looking for Data Analyst/Data Scientist jobs
 - 📫 How to reach me kelvinmutai992@gmail.com and +254790365073
