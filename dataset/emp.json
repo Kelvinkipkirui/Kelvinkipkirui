@@ -1,0 +1,88 @@
+{
+	"name": "emp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "emptable",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "column1",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "column2",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "column3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "column4",
+				"type": "nvarchar"
+			},
+			{
+				"name": "column5",
+				"type": "tinyint",
+				"precision": 3
+			},
+			{
+				"name": "column6",
+				"type": "nvarchar"
+			},
+			{
+				"name": "column7",
+				"type": "date"
+			},
+			{
+				"name": "column8",
+				"type": "nvarchar"
+			},
+			{
+				"name": "column9",
+				"type": "nvarchar"
+			},
+			{
+				"name": "column10",
+				"type": "date"
+			},
+			{
+				"name": "column11",
+				"type": "bit"
+			},
+			{
+				"name": "column12",
+				"type": "tinyint",
+				"precision": 3
+			},
+			{
+				"name": "column13",
+				"type": "tinyint",
+				"precision": 3
+			},
+			{
+				"name": "column14",
+				"type": "tinyint",
+				"precision": 3
+			},
+			{
+				"name": "column15",
+				"type": "nvarchar"
+			},
+			{
+				"name": "column16",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Employee"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

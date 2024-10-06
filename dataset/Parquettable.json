@@ -1,0 +1,101 @@
+{
+	"name": "Parquettable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SchemaName": {
+				"type": "string"
+			},
+			"TableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@concat(dataset().TableName, '.parquet')",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@concat(dataset().SchemaName, '/', dataset().TableName)",
+					"type": "Expression"
+				},
+				"fileSystem": "uuyui"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "column1",
+				"type": "INT32"
+			},
+			{
+				"name": "column2",
+				"type": "INT32"
+			},
+			{
+				"name": "column3",
+				"type": "UTF8"
+			},
+			{
+				"name": "column4",
+				"type": "UTF8"
+			},
+			{
+				"name": "column5",
+				"type": "INT32"
+			},
+			{
+				"name": "column6",
+				"type": "UTF8"
+			},
+			{
+				"name": "column7",
+				"type": "DATE"
+			},
+			{
+				"name": "column8",
+				"type": "UTF8"
+			},
+			{
+				"name": "column9",
+				"type": "UTF8"
+			},
+			{
+				"name": "column10",
+				"type": "DATE"
+			},
+			{
+				"name": "column11",
+				"type": "BOOLEAN"
+			},
+			{
+				"name": "column12",
+				"type": "INT32"
+			},
+			{
+				"name": "column13",
+				"type": "INT32"
+			},
+			{
+				"name": "column14",
+				"type": "INT32"
+			},
+			{
+				"name": "column15",
+				"type": "UTF8"
+			},
+			{
+				"name": "column16",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

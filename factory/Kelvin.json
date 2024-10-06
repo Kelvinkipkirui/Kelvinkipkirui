@@ -1,0 +1,9 @@
+{
+	"name": "Kelvin",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c9ed5384-ae46-42d0-b0aa-a163f6066b22",
+		"tenantId": "db270d57-92f5-42ad-bb3a-bf0a5833522a"
+	}
+}
