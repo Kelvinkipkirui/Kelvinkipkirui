@@ -35,6 +35,10 @@
 			"type": "string",
 			"defaultValue": "Kelvin"
 		},
+		"AzureDatabricks1dataengine_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "1007-065408-nq2s1zxl"
+		},
 		"SqlServerall_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "DESKTOP-05NKJI7\\SQLEXPRESS"
@@ -58,10 +62,6 @@
 		"emptable_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "kelvin"
-		},
-		"AzureDatabricks1dataengine_properties_typeProperties_existingClusterId": {
-			"type": "string",
-			"defaultValue": "1007-065408-nq2s1zxl"
 		}
 	},
 	"variables": {
@@ -279,6 +279,30 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/AzureDatabricks1dataengine')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDatabricks",
+				"typeProperties": {
+					"domain": "https://adb-1428577553855580.0.azuredatabricks.net",
+					"accessToken": {
+						"type": "AzureKeyVaultSecret",
+						"store": {
+							"referenceName": "AzureKeyVault1",
+							"type": "LinkedServiceReference"
+						},
+						"secretName": "accesscontrol"
+					},
+					"existingClusterId": "[parameters('AzureDatabricks1dataengine_properties_typeProperties_existingClusterId')]"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureKeyVault1')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SqlServerall')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -341,30 +365,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/integrationRuntimes/SHIR')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureKeyVault1')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureDatabricks1dataengine')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureDatabricks",
-				"typeProperties": {
-					"domain": "https://adb-1428577553855580.0.azuredatabricks.net",
-					"accessToken": {
-						"type": "AzureKeyVaultSecret",
-						"store": {
-							"referenceName": "AzureKeyVault1",
-							"type": "LinkedServiceReference"
-						},
-						"secretName": "accesscontrol"
-					},
-					"existingClusterId": "[parameters('AzureDatabricks1dataengine_properties_typeProperties_existingClusterId')]"
-				}
-			},
-			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/AzureKeyVault1')]"
 			]
 		},
@@ -632,6 +632,60 @@
 								}
 							]
 						}
+					},
+					{
+						"name": "bronzetosilver",
+						"type": "DatabricksNotebook",
+						"dependsOn": [
+							{
+								"activity": "ForEach1",
+								"dependencyConditions": [
+									"Failed"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"notebookPath": "/Users/kelvinmutai992@gmail.com/DATA ENGINEERING Notebook 2024-10-07 10:13:24"
+						},
+						"linkedServiceName": {
+							"referenceName": "AzureDatabricks1dataengine",
+							"type": "LinkedServiceReference"
+						}
+					},
+					{
+						"name": "togoldnotebook",
+						"type": "DatabricksNotebook",
+						"dependsOn": [
+							{
+								"activity": "bronzetosilver",
+								"dependencyConditions": [
+									"Failed"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"notebookPath": "/Users/kelvinmutai992@gmail.com/silver to gold Notebook 2024-10-08 16:39:34"
+						},
+						"linkedServiceName": {
+							"referenceName": "AzureDatabricks1dataengine",
+							"type": "LinkedServiceReference"
+						}
 					}
 				],
 				"policy": {
@@ -642,6 +696,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/SqlServerTable2')]",
+				"[concat(variables('factoryId'), '/linkedServices/AzureDatabricks1dataengine')]",
 				"[concat(variables('factoryId'), '/datasets/SqlServercopy')]",
 				"[concat(variables('factoryId'), '/datasets/Parquettable')]"
 			]

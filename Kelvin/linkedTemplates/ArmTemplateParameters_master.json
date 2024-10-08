@@ -14,6 +14,9 @@
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://kelvin789.dfs.core.windows.net/"
 		},
+		"AzureDatabricks1dataengine_properties_typeProperties_existingClusterId": {
+			"value": "1007-065408-nq2s1zxl"
+		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://kejkvault.vault.azure.net/"
 		},
@@ -43,9 +46,6 @@
 		},
 		"emptable_properties_typeProperties_userName": {
 			"value": "kelvin"
-		},
-		"AzureDatabricks1dataengine_properties_typeProperties_existingClusterId": {
-			"value": "1007-065408-nq2s1zxl"
 		},
 		"containerUri": {
 			"value": ""
