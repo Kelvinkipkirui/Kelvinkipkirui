@@ -1,0 +1,57 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Kelvin"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"employee_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://kelvin789.dfs.core.windows.net/"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://kejkvault.vault.azure.net/"
+		},
+		"SqlServerall_properties_typeProperties_server": {
+			"value": "DESKTOP-05NKJI7\\SQLEXPRESS"
+		},
+		"SqlServerall_properties_typeProperties_database": {
+			"value": "Kelvin1"
+		},
+		"SqlServerall_properties_typeProperties_userName": {
+			"value": "kelvin"
+		},
+		"employee_properties_typeProperties_server": {
+			"value": "DESKTOP-05NKJI7\\SQLEXPRESS"
+		},
+		"employee_properties_typeProperties_database": {
+			"value": "Kelvin"
+		},
+		"employee_properties_typeProperties_userName": {
+			"value": "Kelvin"
+		},
+		"emptable_properties_typeProperties_server": {
+			"value": "DESKTOP-05NKJI7\\SQLEXPRESS"
+		},
+		"emptable_properties_typeProperties_database": {
+			"value": "Kelvin1"
+		},
+		"emptable_properties_typeProperties_userName": {
+			"value": "kelvin"
+		},
+		"AzureDatabricks1dataengine_properties_typeProperties_existingClusterId": {
+			"value": "1007-065408-nq2s1zxl"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
